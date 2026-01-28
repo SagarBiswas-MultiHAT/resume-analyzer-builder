@@ -1,0 +1,8 @@
+pytest>=7.4
+pytest-cov>=4.1
+pre-commit>=3.6
+black>=24.3
+isort>=5.12
+flake8>=7.0
+pip-audit>=2.7
+build>=1.2

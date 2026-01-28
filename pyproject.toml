@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "resume-analyzer-builder"
+version = "0.1.0"
+description = "Local Flask app for resume analysis and improvement using Groq/OpenAI-compatible models."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+  "Flask",
+  "spacy",
+  "pdfminer.six",
+  "flask-cors",
+  "python-docx",
+  "openai>=1.0.0",
+  "python-dotenv>=1.0.0",
+]
+
+[tool.setuptools]
+packages = ["backend"]
+
+[tool.black]
+line-length = 120
+target-version = ["py39"]
+
+[tool.isort]
+profile = "black"
+line_length = 120
+
+[tool.flake8]
+max-line-length = 120
+extend-ignore = ["E203", "W503"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
